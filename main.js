@@ -1,6 +1,6 @@
 const fs=require('fs');
 
-//fs.writeFileSync('./productos.txt',"")
+fs.writeFileSync('./productos.txt',"")
 
 class Contenedor {
     constructor(nombre) {
@@ -111,9 +111,9 @@ class Contenedor {
 
 const nuevoContenedor =new Contenedor ('./productos.txt')
 
+nuevoContenedor.deleteAll()
 
-
-/*nuevoContenedor.save(
+nuevoContenedor.save(
     {
     title: "Escuadra",
     price: 123.45,
@@ -132,11 +132,12 @@ nuevoContenedor.save(
     title: "Globo Terráqueo",
     price: 345.67,
     thumbnail: 'https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png'
-})*/
+})
 
 
-//nuevoContenedor.getById(3)
-//nuevoContenedor.deleteById(1)
-//nuevoContenedor.getAll()
+nuevoContenedor.getById(3)
+nuevoContenedor.deleteById(1)
+nuevoContenedor.getAll()
 nuevoContenedor.deleteAll()
+
 
